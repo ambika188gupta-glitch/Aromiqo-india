@@ -44,9 +44,12 @@ TASTE THE TRADITION
 </h3>
 <img width="1536" height="1024" alt="logo" src="https://github.com/user-attachments/assets/f0ee0628-e5ca-4702-bbf4-b80ba0dc8f6b" />
 <br>
+<img width="1536" height="1024" alt="ChatGPT Image Sep 18, 2026, 07_31_02 PM" src="https://github.com/user-attachments/assets/2526d087-c1b8-4bfb-b5e6-594ea98af265" />
+<br>
+<img width="1536" height="1024" alt="web" src="https://github.com/user-attachments/assets/a44b5db1-6837-4f35-a5f5-ee12b2bbcaa9" />
+<br>
 <img width="1072" height="992" alt="6" src="https://github.com/user-attachments/assets/3f955dd0-8247-4022-8ce9-aa2b320244d9" />
 <br>
-<img width="1536" height="1024" alt="ChatGPT Image Sep 18, 2026, 07_31_02 PM" src="https://github.com/user-attachments/assets/2526d087-c1b8-4bfb-b5e6-594ea98af265" />
-<img width="1536" height="1024" alt="web" src="https://github.com/user-attachments/assets/a44b5db1-6837-4f35-a5f5-ee12b2bbcaa9" />
 
+<br>
 Design & Developed by :Ambika Gupta
