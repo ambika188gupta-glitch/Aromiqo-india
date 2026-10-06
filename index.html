@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Aromiqo India — premium Indian spices, masalas and food ingredients.">
+<title>Aromiqo India.. | Authentic Flavours. Pure Indian Taste. created by ambika</title>
+<style>
+:root{
+ --gold:#d8a52b;--gold2:#f2c85b;--cream:#f7f1e3;--ink:#090806;
+ --muted:#a9a294;--card:#fffaf0;--border:#d9cba9;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:#fff;font-family:Arial,Helvetica,sans-serif}
+a{text-decoration:none;color:inherit}
+.container{width:min(1400px,92%);margin:auto}
+.topbar{height:34px;border-bottom:1px solid #29231a;display:flex;align-items:center;justify-content:space-between;padding:0 5%;font-size:12px;color:#eee}
+.topbar b{color:var(--gold2)}
+.nav{height:90px;border-bottom:1px solid var(--gold);background:#050504;display:flex;align-items:center;gap:34px;padding:0 5%;position:sticky;top:0;z-index:50}
+.logo{display:flex;align-items:center;gap:12px;min-width:315px}
+.logo-round{width:68px;height:68px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold2);font:45px Georgia;box-shadow:0 0 20px #d8a52b18}
+.logo-text{font:39px Georgia;color:#e6ba4d;line-height:.75}.logo-text small{font-size:17px;display:block;text-align:center;margin-top:7px}
+.navlinks{display:flex;align-items:center;gap:30px;flex:1;height:100%}
+.navlinks a{height:100%;display:flex;align-items:center;border-bottom:2px solid transparent;font-size:15px}
+.navlinks a:hover,.navlinks a.active{color:var(--gold2);border-bottom-color:var(--gold)}
+.search{height:48px;width:300px;border:1px solid var(--gold);border-radius:26px;display:flex;align-items:center;padding:0 15px;gap:8px}
+.search input{border:0;outline:0;background:transparent;color:white;width:100%;font-size:13px}
+.cart{font-size:24px;position:relative}.badge{position:absolute;right:-9px;top:-8px;background:#ed3935;color:white;font-size:10px;padding:3px 6px;border-radius:20px}
+
+.hero{min-height:365px;position:relative;overflow:hidden;background:
+ radial-gradient(circle at 83% 47%,#4c2b0c 0,#1b1108 25%,#090807 62%),
+ #080706}
+.hero:after{content:"";position:absolute;left:-5%;right:-5%;bottom:-75px;height:170px;border-top:2px solid #c69228;border-radius:50%;transform:rotate(5deg);opacity:.7}
+.hero-grid{min-height:365px;display:grid;grid-template-columns:1fr 1.25fr;align-items:center}
+.hero-left{text-align:center;padding:25px}
+.hero-mark{width:105px;height:105px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;margin:auto;color:var(--gold2);font:75px Georgia}
+.hero-brand{font:55px Georgia;color:#e8bb4d;margin-top:-3px}.hero-brand small{display:block;font-size:22px;margin-top:-3px}
+.tagline{font:italic 22px cursive;color:#f1cc61;margin-top:10px}
+.perks{display:flex;justify-content:center;gap:0;margin-top:28px;font-size:11px}.perk{padding:0 17px;border-right:1px solid #675224}.perk:last-child{border:0}
+.hero-right{padding:25px 3%;position:relative}
+.hero-right h1{font:40px Georgia;margin:0 0 10px;line-height:1.05}.hero-right p{font-size:16px;line-height:1.5;max-width:500px;color:#ddd}
+.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--gold);border-radius:28px;padding:13px 26px;margin:8px 8px 0 0;font-weight:bold}
+.btn.primary{background:linear-gradient(#f6d05f,#d49a1d);color:#1b1207;border:0}
+.hero-image{position:absolute;right:-20px;bottom:-10px;width:420px;max-height:300px;object-fit:cover;object-position:center;border-radius:40% 0 0 40%;opacity:.9;mix-blend-mode:screen;mask-image:linear-gradient(to right,transparent 0,#000 18%,#000 100%)}
+.dots{text-align:center;position:relative;z-index:2;padding:5px}.dot{display:inline-block;width:11px;height:11px;border:1px solid #d5a62e;border-radius:50%;margin:0 5px}.dot.active{background:#efbd43}
+
+.categories{background:var(--cream);padding:24px 0;color:#17120b}
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.cat{height:100px;background:#fffaf0;border:1px solid var(--border);border-radius:9px;display:flex;align-items:center;padding:10px 15px;gap:17px;transition:.2s}
+.cat:hover{transform:translateY(-3px);box-shadow:0 10px 24px #0002}
+.cat img{width:145px;height:78px;object-fit:cover;border-radius:8px;mix-blend-mode:multiply}
+.cat h3{font:700 16px Georgia;margin:0 0 5px}.cat p{font-size:12px;color:#777;margin:0}
+
+.products{padding:32px 0 50px;background:#0b0906;position:relative}
+.section-title{text-align:center;font:31px Georgia;color:#ebc45d;margin:0}
+.section-title:before,.section-title:after{content:"";display:inline-block;width:100px;border-top:1px solid #9b7527;margin:0 18px 9px}
+.subtitle{text-align:center;font-size:13px;color:#ddd;margin:7px 0 22px}
+.filters{text-align:center;margin-bottom:22px}.filter{cursor:pointer;background:transparent;color:#ddd;border:1px solid #5e4a20;border-radius:20px;padding:8px 16px;margin:4px}.filter:hover,.filter.active{background:#c18c20;color:#130e07}
+.product-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.card{background:var(--card);color:#17130d;border-radius:9px;overflow:hidden;box-shadow:0 7px 22px #0008}
+.product-img{height:185px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.product-img img{width:100%;height:100%;object-fit:cover;object-position:center}
+.card-body{padding:11px 12px 13px}.card h3{font-size:14px;margin:0 0 5px}.desc{height:30px;color:#777;font-size:11px;line-height:1.3}
+.sizes{display:flex;gap:5px;margin:8px 0}.size{font-size:10px;border:1px solid #ddd;border-radius:11px;padding:4px 7px;cursor:pointer}.size.active{background:#c59123;color:#fff;border-color:#c59123}
+.price{font-weight:700;margin:7px 0}.add{width:100%;border:0;border-radius:20px;background:#be861b;color:#fff;padding:9px;cursor:pointer;font-weight:bold}.add:hover{background:#d09a2a}
+.empty{grid-column:1/-1;text-align:center;color:#aaa;padding:40px}
+
+.about{background:var(--cream);color:#18130d;padding:50px 0}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.about h2{font:34px Georgia;color:#886216}.about p{color:#5d554a;line-height:1.7}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.stat{border:1px solid var(--border);border-radius:8px;padding:22px;text-align:center}.stat b{display:block;font:29px Georgia;color:#9c731d;margin-bottom:6px}
+footer{border-top:1px solid #342a17;padding:38px 0;background:#050504}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:35px}.footer-title{font:20px Georgia;color:#e4b84d;margin-bottom:13px}.footer-grid p,.footer-grid a{font-size:13px;color:#aaa;line-height:1.8;display:block}.copyright{text-align:center;color:#777;border-top:1px solid #282116;margin-top:25px;padding-top:18px;font-size:12px}
+.wa{position:fixed;right:18px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#20c766;color:#fff;display:grid;place-items:center;font-size:29px;z-index:80;box-shadow:0 7px 20px #0008}.up{position:fixed;right:20px;bottom:88px;width:45px;height:45px;border-radius:50%;border:1px solid var(--gold);background:#080706;color:var(--gold2);z-index:80;cursor:pointer}
+@media(max-width:1150px){.logo{min-width:240px}.navlinks{gap:16px}.search{width:210px}.product-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:800px){
+ .topbar span:nth-child(2){display:none}.nav{height:auto;min-height:76px;flex-wrap:wrap;padding:9px 4%;gap:10px}.logo{min-width:0;flex:1}.logo-round{width:52px;height:52px;font-size:34px}.logo-text{font-size:27px}.logo-text small{font-size:12px}.search{width:145px;height:38px}.navlinks{order:3;width:100%;height:38px;justify-content:space-between;gap:10px}.navlinks a{font-size:12px}.hero-grid{grid-template-columns:1fr}.hero-left{padding-bottom:5px}.hero-right{text-align:center;padding:10px 5% 30px}.hero-right p{margin:10px auto}.hero-image{position:relative;right:auto;bottom:auto;width:90%;height:150px;margin:10px auto 0;display:block}.cat-grid{grid-template-columns:1fr 1fr}.product-grid{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){
+ .cat-grid,.product-grid{grid-template-columns:1fr}.hero-brand{font-size:43px}.tagline{font-size:18px}.perks{font-size:9px}.perk{padding:0 7px}.section-title:before,.section-title:after{width:35px}.footer-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+ <span>🚚 <b>Free Shipping</b> on Orders Above ₹300</span>
+ <span>🌿 <b>100% Natural</b> &nbsp;|&nbsp; Pure & Authentic &nbsp;|&nbsp; Made with Care</span>
+ <span>♙ Login / Register &nbsp;&nbsp; 🛒 Cart (<b id="cartTop">0</b>)</span>
+</div>
+
+<nav class="nav">
+ <a class="logo" href="#home"><div class="logo-round">A</div><div class="logo-text">Aromiqo<small>India</small></div></a>
+ <div class="navlinks">
+  <a class="active" href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About Us</a><a href="#bulk">Bulk Orders</a><a href="#contact">Contact Us</a>
+ </div>
+ <label class="search">⌕ <input id="search" placeholder="Search for spices, masalas..."></label>
+ <div class="cart">🛒<span class="badge" id="badge">0</span></div>
+</nav>
+
+<section class="hero" id="home">
+ <div class="container hero-grid">
+  <div class="hero-left">
+   <div class="hero-mark">A</div>
+   <div class="hero-brand">Aromiqo<small>India</small></div>
+   <div class="tagline">Nature's Essence, Your Everyday Luxury</div>
+   <div class="perks"><div class="perk">🌿<br>100% Natural</div><div class="perk">◇<br>Premium Quality</div><div class="perk">✦<br>Made with Care</div><div class="perk">♧<br>For a Better You</div></div>
+  </div>
+  <div class="hero-right">
+   <h1>Authentic Flavours.<br>Pure Indian Taste.</h1>
+   <p>Premium spices and food ingredients crafted to bring authentic aroma and flavour to every kitchen.</p>
+   <a class="btn primary" href="#shop">Shop Now →</a><a class="btn" href="#bulk">Bulk Orders →</a>
+   <img class="hero-image" src="assets/hero-spices.jpg" alt="Aromatic Indian spices">
+  </div>
+ </div>
+ <div class="dots"><i class="dot active"></i><i class="dot"></i><i class="dot"></i></div>
+</section>
+
+<section class="categories">
+ <div class="container cat-grid">
+  <a class="cat" href="#shop" data-cat="whole"><img src="assets/cat-whole-spices.jpg" alt="Whole spices"><div><h3>Whole Spices ›</h3><p>Pure & Natural</p></div></a>
+  <a class="cat" href="#shop" data-cat="powder"><img src="assets/cat-powdered-spices.jpg" alt="Powdered spices"><div><h3>Powdered Spices ›</h3><p>Rich Aroma</p></div></a>
+  <a class="cat" href="#shop" data-cat="masala"><img src="assets/cat-blended-masalas.jpg" alt="Blended masalas"><div><h3>Blended Masalas ›</h3><p>Authentic Taste</p></div></a>
+  <a class="cat" href="#shop" data-cat="ingredient"><img src="assets/cat-food-ingredients.jpg" alt="Food ingredients"><div><h3>Food Ingredients ›</h3><p>For Every Recipe</p></div></a>
+ </div>
+</section>
+
+<section class="products" id="shop">
+ <div class="container">
+  <h2 class="section-title">Featured Products</h2>
+  <p class="subtitle">Premium quality spices and ingredients for your everyday cooking</p>
+  <div class="filters">
+   <button class="filter active" data-filter="all">All</button>
+   <button class="filter" data-filter="masala">Masalas</button>
+   <button class="filter" data-filter="powder">Powders</button>
+   <button class="filter" data-filter="ingredient">Ingredients</button>
+  </div>
+  <div class="product-grid" id="products"></div>
+ </div>
+</section>
+
+<section class="about" id="about">
+ <div class="container about-grid">
+  <div><h2>Our Promise of Purity</h2><p>Aromiqo India is built around a simple idea: everyday food deserves authentic aroma, honest ingredients and thoughtful quality. Our spices are selected and packed with care for homes, restaurants and bulk buyers.</p><a class="btn" style="color:#704f13" href="#contact">Know More →</a></div>
+  <div class="stats"><div class="stat"><b>100%</b>Natural Focus</div><div class="stat"><b>20+</b>Products</div><div class="stat"><b>₹999+</b>Free Shipping</div></div>
+ </div>
+</section>
+
+<footer id="contact">
+ <div class="container footer-grid">
+  <div><div class="footer-title">Aromiqo India</div><p>Nature's Essence, Your Everyday Luxury.</p><p>Premium Indian spices, masalas and food ingredients.</p></div>
+  <div><div class="footer-title">Quick Links</div><a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About Us</a></div>
+  <div><div class="footer-title">Customer Care</div><a href="#contact">Contact Us</a><a href="#bulk">Bulk Orders</a><a href="#">Shipping Policy</a></div>
+  <div id="bulk"><div class="footer-title">Bulk Orders</div><p>For wholesale & restaurant enquiries:</p><p><b style="color:#e8bd4f">+91 90000 00000</b><br>sales@aromiqoindia.com</p></div>
+ </div>
+ <div class="container copyright">© 2026 Aromiqo India. All rights reserved. created by ambika</div>
+</footer>
+
+<a class="wa" href="https://wa.me/919000000000" aria-label="WhatsApp">◔</a>
+<button class="up" onclick="window.scrollTo({top:0,behavior:'smooth'})">⌃</button>
+
+<script>
+const products=[
+ {name:"Garam Masala",cat:"masala",desc:"Rich aroma and authentic Indian taste.",price:149,img:"assets/garam-masala.jpg"},
+ {name:"Turmeric Powder",cat:"powder",desc:"Pure and vibrant yellow color.",price:99,img:"assets/turmeric-powder.jpg"},
+ {name:"Red Chilli Powder",cat:"powder",desc:"Spicy, rich and flavourful.",price:89,img:"assets/red-chilli-powder.jpg"},
+ {name:"Coriander Powder",cat:"powder",desc:"Freshly ground for natural taste.",price:79,img:"assets/coriander-powder.jpg"},
+ {name:"Garlic Powder",cat:"ingredient",desc:"Adds perfect flavour to your dishes.",price:129,img:"assets/garlic-powder.jpg"},
+ {name:"Onion Powder",cat:"ingredient",desc:"Natural taste, rich in flavour.",price:119,img:"assets/onion-powder.jpg"},
+ {name:"Kitchen King Masala",cat:"masala",desc:"Aromatic blend for everyday cooking.",price:139,img:"assets/garam-masala.jpg"},
+ {name:"Cumin Powder",cat:"powder",desc:"Earthy aroma and warm flavour.",price:109,img:"assets/coriander-powder.jpg"},
+ {name:"Black Pepper",cat:"ingredient",desc:"Bold, fresh and naturally aromatic.",price:159,img:"assets/garlic-powder.jpg"},
+ {name:"Premium Chaat Masala",cat:"masala",desc:"Tangy and aromatic Indian blend.",price:119,img:"assets/garam-masala.jpg"},
+ {name:"Cumin Whole",cat:"ingredient",desc:"Warm, earthy and aromatic.",price:139,img:"assets/coriander-powder.jpg"},
+ {name:"Premium Chilli",cat:"powder",desc:"Deep colour with bold flavour.",price:109,img:"assets/red-chilli-powder.jpg"}
+];
+let filter="all",cart=0;
+const grid=document.getElementById("products");
+function render(){
+ const q=document.getElementById("search").value.trim().toLowerCase();
+ const list=products.filter(p=>(filter==="all"||p.cat===filter)&&p.name.toLowerCase().includes(q));
+ grid.innerHTML=list.length?list.map(p=>`
+  <article class="card">
+   <div class="product-img"><img src="${p.img}" alt="${p.name}" loading="lazy"></div>
+   <div class="card-body">
+    <h3>${p.name}</h3><div class="desc">${p.desc}</div>
+    <div class="sizes"><span class="size active">50g</span><span class="size">100g</span><span class="size">200g</span><span class="size">500g</span></div>
+    <div class="price">₹${p.price}</div>
+    <button class="add" onclick="addCart()">🛒 Add to Cart</button>
+   </div>
+  </article>`).join(""):`<div class="empty">No products found.</div>`;
+ document.querySelectorAll(".size").forEach(s=>s.onclick=()=>{s.parentElement.querySelectorAll(".size").forEach(x=>x.classList.remove("active"));s.classList.add("active")});
+}
+function addCart(){cart++;document.getElementById("badge").textContent=cart;document.getElementById("cartTop").textContent=cart}
+document.querySelectorAll(".filter").forEach(b=>b.onclick=()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");filter=b.dataset.filter;render()});
+document.querySelectorAll(".cat").forEach(c=>c.onclick=()=>{const map={whole:"all",powder:"powder",masala:"masala",ingredient:"ingredient"};filter=map[c.dataset.cat];document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x.dataset.filter===filter));render()});
+document.getElementById("search").addEventListener("input",render);
+render();
+</script>
+</body>
+</html>
